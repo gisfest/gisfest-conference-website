@@ -1,0 +1,122 @@
+.schedule-container {
+    justify-content: center;
+    align-content: center;
+    width: 95%;
+    
+}
+
+.navigation {
+    flex-wrap: wrap;
+ 
+}
+
+.button{
+    padding: var(--button-padding);
+    border: 1px solid rgb(223, 222, 222);
+    font-size: var(--button-font-size);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+.active-button{
+    background-color: #0B111A;
+    color: #fff;
+}
+
+
+
+.date-container {
+    padding: 10px;
+    background-color: var(--background-black);
+    color: #fff;
+    font-size: 20px;
+    width: 280px;
+    margin-bottom: 10px ;
+}
+
+.agenda-day-content {
+    padding-bottom: 30px;
+}
+
+
+.agenda-schedule-container {
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--brand-green);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(255, 255, 255, .4) 0px 3px 6px;
+    flex-direction: column;
+   }
+
+
+.agenda-time {
+    padding: var(--agenda-time-padding);
+    background-color: var(--brand-red);
+    text-align: left;
+    font-size: 14px;
+    border-radius: 10px;
+    width: var(--agenda-time-width);
+    line-height: 38px;
+    color: #fff;
+}
+
+.agenda-schedule-content  {
+    padding: 10px;
+   
+}
+
+
+.agenda-schedule-content > *{
+    padding-bottom: 10px;
+}
+
+.agenda-watch{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: flex-start;
+}
+
+.agenda-proceedings{
+    display: flex;
+    background-color: #0B111A;
+    width: 150px;
+    gap:0.5em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+.session-content {
+    font-size: 16px;
+   
+}
+
+.travel-guide-container ul {
+    list-style-type:circle;
+    margin-left: 20px;
+  }
+
+  .travel-content {
+    margin-bottom: 20px;
+  }
+  .travel-content > * {
+    margin-bottom:10px ;
+  }
+
+  .travel-content h2 {
+    font-weight: 1000;
+  }

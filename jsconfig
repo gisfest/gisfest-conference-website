@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "module": "es6",
+      "target": "es6",
+      "checkJs": true,
+      "baseUrl": ".",
+      "moduleResolution": "node",
+      "jsx": "react-jsx",
+      "paths": {
+        "@/components/*":["src/components/*"],
+        "@/pages/*":["src/pages/*"],
+        "@/utils/*":["src/utils/*"]
+      },
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*.jsx", "src/App.jsx", "src/index.jsx"],
+}

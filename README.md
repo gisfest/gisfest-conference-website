@@ -1,1 +1,3 @@
-# gisfest-conference-website
+# GIS Festival Website
+
+### GISfest is a conference bringing together geospatial professionals and enthusiasts in Africa and beyond to discuss geospatial technologies and its applications in numerous industries. This event is primed to put a spotlight on geospatial technology with respect to modern tools and innovation. This 2 days event will feature workshops, presentations, panel discussions, hackathons and will provide a good way to connect with community members from all over Africa. If you are a Geospatial enthusiasts, students, engineer, analysts, technician, developer, manager or you use geospatial data and/or technology then GISfest is for YOU!
