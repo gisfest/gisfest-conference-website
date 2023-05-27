@@ -1,0 +1,85 @@
+section {
+    background-color: var(--brand-yellow);
+    width: 100%;
+    padding: 7% 4%;
+    text-align: center;
+}
+
+section h3{
+    font-size: 18px;
+}
+
+section * {
+   margin-top: 7px;
+}
+
+section table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    outline: none;
+    width: 60%;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    border: 2px solid ;
+    transition: all .5s ease-out;
+}
+
+form span {
+    font-size: 15px;
+    background: #ffff;
+    border-radius: 5px;
+    border: 2px solid #000;
+    width: 60%;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: var(--brand-green);
+
+}
+
+
+@media screen and (max-width:500px) { 
+    section {
+        background-color: var(--brand-yellow);
+        width: 100%;
+        padding: 12% 4%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width:700px) {
+    section h3{
+        font-size: 25px;
+    }
+    input {
+        padding: 15px;
+        width: 50%;
+    }
+    
+    button{
+        padding: 15px;
+        font-size: 16px;
+    }
+}

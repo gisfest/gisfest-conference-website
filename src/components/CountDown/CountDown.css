@@ -1,0 +1,37 @@
+.countdown-content{
+    border: 3px solid var(--brand-yellow);
+    min-width:45%;
+    padding:8px;
+    gap: 5px;
+}
+
+.countdown-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+
+.coundown-info {
+    font-size:   var(--countdown-content-info-font-size);
+    letter-spacing: 1px;
+}
+span {
+    color: var(--brand-yellow);
+    line-height:32px;
+}
+
+time-block {
+    padding:10px;
+    display:block;
+    flex-grow: 1;
+    display: inline-block;
+}
+.time{
+    font-size:26px;
+    font-weight: bold;
+}
+
+small {
+    font-size: var(--countdown-content-small-text);   
+}

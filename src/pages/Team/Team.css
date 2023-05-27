@@ -1,0 +1,36 @@
+  .team-content {
+    margin-bottom: 100px;
+    
+  }
+
+  .team-content> * {
+    margin-bottom: 25px;
+    
+  }
+  
+  .team-title {
+    font-size: var(--team-title-font-size);
+    font-weight: 700;
+    line-height: 40px;
+  }
+
+  .team-emoji {
+    width: 35px;
+    height: 35px;
+    line-height: 40px;
+  }
+  
+  .team-name {
+    gap: var(--team-name-gap);
+    line-height: var(--team-name-line-height);
+  }
+
+.team-member-card {
+    gap: var(--team-member-card-gap);
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: var(--team-member-card-flex-direction);
+}
+

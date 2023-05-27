@@ -1,0 +1,115 @@
+.navbar-container {
+    width: 100%;
+    height:80px;
+    background-color: #0B111A;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    transition: all .8s ease;
+    scroll-behavior: smooth;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+  }
+
+.navbar-links {
+    display: flex;
+    gap: 24px;
+    font-family: "Montserrat";
+    line-height: 45px;
+    width: var(--navbar-links-width);
+    right: var(--navbar-links-right);
+    text-align: var(--navbar-links-text-align);
+    min-height: var(--navbar-links-min-height);
+    flex-direction: var(--navbar-links-flex-direction);
+    top: var(--navbar-links-top);
+    visibility: var(--navbar-links-visibility);
+    opacity: var(--navbar-links-opacity);
+    transition: var(--navbar-links-transition);
+    z-index: var(--navbar-links-z-index);
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 18px;
+    transition: all .3s ease-out;
+}
+
+.nav-btn {
+    padding: var(--nav-btn-padding);
+    border: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #0B111A;
+    background-color: var(--brand-yellow);
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+.nav-btn a{
+    color:black;
+}
+
+.nav-btn a:hover{
+    color:white;
+}
+
+
+.nav-btn:hover {
+    color: var(--brand-yellow);
+    background-color: var(--brand-green);
+}
+.nav-link:hover {
+    color: var(--brand-yellow);
+    background-color: var(--nav-link-hover-background-color);
+    padding: var(--nav-link-hover-padding);
+    border-radius: var(--nav-link-hover-border-radius);
+}
+
+.nav-link-active {
+    color: var(--brand-yellow);
+    font-size: 20px;
+    font-weight: 400;
+    padding: var(--nav-link-hover-padding);
+    border-radius: var(--nav-link-hover-border-radius);
+}
+
+.Icon {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.Nav_logo {
+    width: var(--nav-logo-width);
+}
+
+.Nav_logo img {
+    width: 130px;
+}
+
+.icon {
+    width:var(--nav-icon-width);
+}
+
+.nav-menu-mobile {
+    display: var(--nav-menu-mobile-display)
+}
+
+.active-nav-menu {
+    background-color: var(--active-nav-menu-background-color);
+    right: var(--active-nav-menu-right);
+    opacity: var(--active-nav-menu-opacity);
+    visibility: visible;
+    position: var(--active-nav-menu-position);
+    z-index: var(--active-nav-menu-z-index);
+    padding-top: var(--active-nav-menu-padding-top);
+}
