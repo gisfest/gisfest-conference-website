@@ -1,5 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { SVGProps } from 'react';
+
 export type TConferenceEdition = {
 	hashtag: string;
 	location: string;
@@ -49,6 +50,10 @@ export type TSiteConfiguration = {
 	speakers: TConferenceSpeaker['speaker'][];
 	speakerDeckURL: string;
 	speakerCTA: string;
+	pasteditions: PEditionCard['session'][];
+	pastEditionsCTA: string;
+	pastEditionURL: string;
+	faqs: PFaqInfo[];
 	callForSpeakers: TCallForSpeakers;
 };
 
@@ -115,10 +120,10 @@ export type TAgendaCard = {
 	abstract?: string;
 	speakers?: {
 		name: string;
-	    role: string;
-		avatar: string,
-		company: string,
-		sociallink: string,
+		role: string;
+		avatar: string;
+		company: string;
+		sociallink: string;
 	}[];
 };
 
@@ -192,7 +197,13 @@ export type TConferenceSpeaker = {
 	};
 };
 
-export type tag = {
-	title: string;
-	style: string;
-}
+export type PEditionCard = {
+	session: {
+		link: string;
+	};
+};
+
+export type PFaqInfo = {
+	question: string;
+	answer: string;
+};
