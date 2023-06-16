@@ -1,12 +1,18 @@
 import CallToAction from '@/components/CTA';
 import CallForSpeakersContent from '@/app/contents/cfs.mdx';
+
 import type { Metadata } from 'next';
+import TopBgPattern from '@/components/shared/TopBgPattern';
 export default function CallForSpeakers() {
 	return (
-		<div className="flex flex-col gap-10">
-			<CallForSpeakersContent />
-			<CallToAction />
-		</div>
+		<>
+			<TopBgPattern variant="center" pageTitle="Call for Speakers" />
+
+			<div className="flex flex-col gap-10">
+				<CallForSpeakersContent />
+				<CallToAction />
+			</div>
+		</>
 	);
 }
 

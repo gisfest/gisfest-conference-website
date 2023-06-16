@@ -46,15 +46,15 @@ export type TSiteConfiguration = {
 	teamDescription: string[];
 	callToAction: TCallToAction;
 	showAgenda: boolean;
-	defaultSpeakerInfo: TConferenceSpeaker['speaker'][];
 	speakers: TConferenceSpeaker['speaker'][];
 	speakerDeckURL: string;
 	speakerCTA: string;
-	pasteditions: PEditionCard['session'][];
+	pastEditions: PEditionCard['session'][];
 	pastEditionsCTA: string;
 	pastEditionURL: string;
 	faqs: PFaqInfo[];
 	callForSpeakers: TCallForSpeakers;
+	pastEditionCategoryFilters: string[];
 };
 
 export interface TSVGProps extends SVGProps<SVGSVGElement> {
@@ -121,7 +121,7 @@ export type TAgendaCard = {
 	speakers?: {
 		name: string;
 		role: string;
-		avatar: string;
+		avatar: StaticImageData | null;
 		company: string;
 		sociallink: string;
 	}[];
@@ -169,7 +169,7 @@ export type teamMembers = {
 	twitter: string;
 	linkedIn: string;
 	teamName: string;
-	avatar: string;
+	avatar: StaticImageData;
 };
 
 export type conference = {
@@ -191,16 +191,14 @@ export type TConferenceSpeaker = {
 	speaker: {
 		name: string;
 		role: string;
-		avatar: string;
+		avatar: StaticImageData | null;
 		company: string;
 		sociallink: string;
 	};
 };
 
 export type PEditionCard = {
-	session: {
-		link: string;
-	};
+	link: string;
 };
 
 export type PFaqInfo = {

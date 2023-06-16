@@ -6,6 +6,10 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+	/* hide scrollbar  */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
 }
 
 @font-face {
@@ -24,8 +28,8 @@
 	.wrapper {
 		@apply container mx-auto max-w-screen-tv h-full tablet:mt-[5%] laptop:mt-0  laptop:px-24 left-0 right-0 tablet:px-14 laptop:space-y-[107px] space-y-[57px] px-6;
 	}
-	.top-space{
-		@apply  laptop:my-[10rem] my-[5rem];
+	.top-space {
+		@apply laptop:my-[10rem] my-[5rem];
 	}
 
 	.tag-padding {
@@ -38,20 +42,19 @@
 	.markdown-bg {
 		@apply p-4 laptop:p-6 bg-sc-10;
 	}
+
+	.past-edition-nav {
+		@apply rounded-full flex items-center justify-center cursor-pointer h-[42px] w-[42px] text-tc-10 bg-[#222225] border border-tc-20;
+	}
 }
 
 @layer utilities {
 	/* @variants responsive -> DEPRECATED */
 	/* Hide scrollbar for Chrome, Safari and Opera */
-	.no-scrollbar::-webkit-scrollbar {
+	::-webkit-scrollbar {
 		display: none;
 	}
 
-	/* Hide scrollbar for IE, Edge and Firefox */
-	.no-scrollbar {
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
-	}
 	.stroked-text {
 		-webkit-text-stroke: 1.4px #9e9e9f; /* Stroke width and color */
 		-webkit-text-fill-color: transparent; /* Ensures text color is applied */

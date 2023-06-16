@@ -26,8 +26,9 @@ const sponsorshipDeck =
 	'https://drive.google.com/file/d/1pIW3-Bf6lW0HXjwWxMalfQq5otFXKekc/view';
 const speakerDeck = 'https://downloadurl.com';
 const speakerCTA = 'Join our Speakers';
-const pastEditionCTA = 'Explore Past edition';
-const pastEditionURL = '/pastEdition';
+const pastEditionCTA = 'Explore Past Edition';
+const pastEditionURL = '/past-edition';
+
 export const siteConfiguration: TSiteConfiguration = {
 	/********  homePage  ***********/
 
@@ -139,7 +140,7 @@ export const siteConfiguration: TSiteConfiguration = {
 
 	// FAQ
 
-	faq: [
+	faqs: [
 		{
 			question: 'Who can attend',
 			answer:
@@ -242,7 +243,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Cameron Williamson',
 							role: 'Product Evanlegist',
-							avatar: '/assets/images/defaultSpeaker.svg',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -260,7 +261,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'GISfest2023 Team',
 							role: 'Organizers',
-							avatar: '/assets/images/defaultSpeaker.svg',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'GISfest2023',
 							sociallink: '',
 						},
@@ -278,7 +279,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Darrell Steward',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -296,7 +297,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Darrell Steward',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: null,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -304,7 +305,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Saannah Nguyen',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: null,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -312,7 +313,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Blessie Cooper',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: null,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -344,7 +345,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Cemeron Williamson',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -361,7 +362,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Darrell Steward',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -379,7 +380,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Darrell Steward',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -387,7 +388,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Saannah Nguyen',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -395,7 +396,7 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Blessie Cooper',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
 							sociallink:
 								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
@@ -434,7 +435,7 @@ export const siteConfiguration: TSiteConfiguration = {
 					fullName: 'Emmanuel jolaiya',
 					twitter: '@emmanueljolaiya',
 					linkedIn: 'https://www.linkedin.com/in/emmanueljolaiya/',
-					teamName: 'Design & Tech.',
+					teamName: 'Design & Tech.(Lead)',
 					avatar: EmmanuelJolaiyaAvatar,
 				},
 				{
@@ -490,7 +491,7 @@ export const siteConfiguration: TSiteConfiguration = {
 					fullName: 'Oluwadamilola Salau',
 					twitter: '@shehumuhammed',
 					linkedIn: 'https://www.linkedin.com/in/shehumuhammed/',
-					teamName: 'Budget',
+					teamName: 'Logistics & Budget',
 					avatar: OluwadamilolaSalauAvatar,
 				},
 			],
@@ -503,6 +504,7 @@ export const siteConfiguration: TSiteConfiguration = {
 					twitter: '@shehumuhammed',
 					linkedIn: 'https://www.linkedin.com/in/shehumuhammed/',
 					teamName: 'Media',
+					avatar: SheuhMuhammedAvatar,
 				},
 			],
 		},
@@ -522,101 +524,103 @@ export const siteConfiguration: TSiteConfiguration = {
 	speakerCTA: speakerCTA,
 	speakers: [
 		{
-			name: 'Cameron Williamson',
-			role: 'Product Evanlegist',
-			avatar: '/assets/images/speakers/cameron.png',
-			company: 'Dealcode',
-			sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+			name: 'Coming soon',
+			role: '',
+			avatar: null,
+			company: 'Coming soon',
+			sociallink: '',
 		},
 		{
-			name: 'Annette Black',
-			role: 'GIS Analyst',
-			avatar: '/assets/images/speakers/annette.png',
-			company: 'Esri',
-			sociallink: 'https://twitter.com/oluwaseunogunb1',
+			name: 'Coming soon',
+			role: '',
+			avatar: null,
+			company: 'Coming soon',
+			sociallink: '',
 		},
 		{
-			name: 'Marvin McKinney',
-			role: 'Researcher and GIS Expert',
-			avatar: '/assets/images/speakers/marvin.png',
-			company: 'GISkonsult',
-			sociallink: 'https://www.linkedin.com/in/oluwaseun-ogunbiyi-0b1b3b1b0/',
+			name: 'Coming soon',
+			role: '',
+			avatar: null,
+			company: 'Coming soon',
+			sociallink: '',
 		},
 		{
-			name: 'Floyd Miles',
-			role: 'GIS Expert',
-			avatar: '/assets/images/speakers/floyd.png',
-			company: 'Sambus',
-			sociallink: 'https://twitter.com/oluwaseunogunb1',
-		},
-		{
-			name: 'Dianne Russell',
-			role: 'GIS Developer',
-			avatar: '/assets/images/speakers/dianne.png',
-			company: 'Trenewise',
-			sociallink: 'https://www.linkedin.com/in/oluwaseun-ogunbiyi-0b1b3b1b0/',
-		},
-		{
-			name: 'Jane Cooper',
-			role: 'Geospatial Expert',
-			avatar: '/assets/images/speakers/jane.png',
-			company: 'Bolt',
-			sociallink: 'https://twitter.com/oluwaseunogunb1',
-		},
-		{
-			name: 'Courtney Henry',
-			role: 'Data Quality Manger',
-			avatar: '/assets/images/speakers/courtney.png',
-			company: 'HOTOSM',
-			sociallink: 'https://www.linkedin.com/in/oluwaseun-ogunbiyi-0b1b3b1b0/',
-		},
-		{
-			name: 'Cody Fisher',
-			role: 'Product Evangelist',
-			avatar: '/assets/images/speakers/cody.png',
-			company: 'AfriHAck',
-			sociallink: 'https://twitter.com/oluwaseunogunb1',
+			name: 'Coming soon',
+			role: '',
+			avatar: null,
+			company: 'Coming soon',
+			sociallink: '',
 		},
 	],
 
 	pastEditionsCTA: pastEditionCTA,
 	pastEditionURL: pastEditionURL,
-	pasteditions: [
+	pastEditionCategoryFilters: [
+		'All',
+		'Keynote Session',
+		'Workshop',
+		'Career Panel',
+		'Geo-Innovation',
+	],
+	pastEditions: [
 		{
 			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
+			category: 'Keynote Session',
 		},
 		{
 			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
+			category: 'Keynote Session',
 		},
 		{
 			link: 'https://www.youtube.com/embed/dDn70QiifkE',
+			category: 'Geo-Innovation',
 		},
 		{
-			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
+			category: 'Geo-Innovation',
 		},
 		{
-			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
+			category: 'Geo-Innovation',
 		},
 		{
-			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+			link: 'https://www.youtube.com/embed/dDn70QiifkE',
+			category: 'Workshop',
 		},
 		{
-			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
+			category: 'Workshop',
 		},
 		{
-			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
+			category: 'Workshop',
 		},
 		{
-			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+			link: 'https://www.youtube.com/embed/dDn70QiifkE',
+			category: 'Workshop',
 		},
 		{
-			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
+			category: 'Workshop',
 		},
 		{
-			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
+			category: 'Career Panel',
 		},
 		{
-			link: 'https://www.youtube.com/embed/9QZ1XZyX6Zc',
+			link: 'https://www.youtube.com/embed/dDn70QiifkE',
+			category: 'Career Panel',
 		},
 	],
+
+	callForSpeakers: {
+		timeline: {
+			callOpen: '23 May 2023',
+			callClose: '25 September, 2023',
+		},
+		sessionSubmissionButton: {
+			text: 'Submit a session',
+			route: '',
+		},
+	},
 };

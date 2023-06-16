@@ -1,20 +1,20 @@
-import { PEditionCard } from "@/config/types"
+import { PEditionCard } from '@/config/types';
+import { useContext } from 'react';
 
-const PastEditionCard = ({ session } : PEditionCard) => {
-    return (
-        <>
-        <div className="flex flex-col items-center text-center">
-            <div className="relative overflow-hidden w-[373px] h-[209px] ring-1 ring-tc-10 rounded-2xl flex flex-col gap-4 tablet:gap-8">
-                <iframe src={session.link}
-                    className="absolute top-0 left-0 w-full h-full"
-                >
+const PastEditionCard = ({ session }: { session: PEditionCard }) => {
+	return (
+		<div>
+			<div className="relative w-[287px] h-[183px]  overflow-hidden  border  border-tc-30 rounded-2xl ">
+				<iframe
+					src={session.link}
+					title="Embedded Youtube Video"
+					allowFullScreen
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; modestbranding=1;"
+					className="absolute top-0 left-0 w-full h-full"
+				></iframe>
+			</div>
+		</div>
+	);
+};
 
-                </iframe>
-            </div>
-            </div>
-        </>
-    
-    )
-}
-
-export default PastEditionCard
+export default PastEditionCard;
