@@ -13,7 +13,7 @@ import OmowonuolaAkintolaAvatar from '@/public/assets/images/team/omowonuola_aki
 import SheuhMuhammedAvatar from '@/public/assets/images/team/shehu-muhammed.jpg';
 import VictorAdemoyeroAvatar from '@/public/assets/images/team/victor-ademoyero.jpg';
 import MichaelOlanrewajuAvatar from '@/public/assets/images/team/michael-olanrewaju.jpg';
-
+import bensonAvatar from '@/public/assets/images/team/bensonAvatar.jpeg';
 import {
 	AgendaCategory,
 	SponsorCategory,
@@ -41,22 +41,22 @@ export const siteConfiguration: TSiteConfiguration = {
 		navigationLinks: [
 			{
 				text: 'About',
-				route: 'about',
+				route: '/#about',
 				isActive: true,
 			},
 			{
 				text: 'Sponsors',
-				route: 'sponsors',
+				route: '/#sponsors',
 				isActive: true,
 			},
 			{
 				text: 'Speakers',
-				route: 'speakers',
+				route: '/#speakers',
 				isActive: false,
 			},
 			{
 				text: 'Agenda',
-				route: 'agenda',
+				route: '/#agenda',
 				isActive: false,
 			},
 		],
@@ -222,7 +222,7 @@ export const siteConfiguration: TSiteConfiguration = {
 		},
 	],
 
-	showAgenda: true,
+	showAgenda: false,
 	// Agenda
 	agenda: [
 		{
@@ -414,7 +414,7 @@ export const siteConfiguration: TSiteConfiguration = {
 	],
 
 	// Venue
-
+	showVenue: false,
 	venueImages: [
 		{ path: VenueImageOne, alt: 'Image One' },
 		{ path: VenueImageTwo, alt: 'Image One' },
@@ -500,11 +500,11 @@ export const siteConfiguration: TSiteConfiguration = {
 			category: TeamCategory.Volunteers,
 			teamMembers: [
 				{
-					fullName: 'Shehu Muhammed',
-					twitter: '@shehumuhammed',
-					linkedIn: 'https://www.linkedin.com/in/shehumuhammed/',
-					teamName: 'Media',
-					avatar: SheuhMuhammedAvatar,
+					fullName: 'Iniobong Benson',
+					twitter: '',
+					linkedIn: 'https://www.linkedin.com/in/linibenson/',
+					teamName: 'Design & Tech.',
+					avatar: bensonAvatar,
 				},
 			],
 		},
@@ -615,12 +615,12 @@ export const siteConfiguration: TSiteConfiguration = {
 
 	callForSpeakers: {
 		timeline: {
-			callOpen: '23 May 2023',
-			callClose: '25 September, 2023',
+			callOpen: '26th May 2023',
+			callClose: '25 August, 2023',
 		},
 		sessionSubmissionButton: {
 			text: 'Submit a session',
-			route: '',
+			route: 'https://forms.gle/7xXZUcqmGpS81sT17',
 		},
 	},
 };

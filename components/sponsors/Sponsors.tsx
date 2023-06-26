@@ -14,7 +14,7 @@ export default function Sponsors() {
 			<SectionHeader
 				title="Sponsor"
 				layout="text-center"
-				paragraph="Organizations that contributed to the achievement of GISfest"
+				paragraph="Support us on the journey to promote geospatial innovation in Africa."
 			/>
 			<div className="gap-[10px] tablet:gap-8 grid grid-cols-2 tablet:grid-cols-3  laptop:grid-cols-4 grid-flow-row ">
 				{sponsors.map((sponsor, id) => (

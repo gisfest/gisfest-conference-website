@@ -9,5 +9,8 @@ const nextConfig = {
 };
 
 //ref-https://nextjs.org/docs/app/building-your-application/configuring/mdx
-const withMDX = require('@next/mdx')();
+const withMDX = require('@next/mdx')({
+	options: {
+    providerImportSource: '@mdx-js/react',
+  },});
 module.exports = withMDX(nextConfig);

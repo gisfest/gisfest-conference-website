@@ -36,7 +36,7 @@ export type TSiteConfiguration = {
 	about: TAbout;
 	takeAway: TtakeAwayInfo[];
 	takeAwayAutoScrollDelay: number;
-	faq: TFaqInfo[];
+	faqs: TFaqInfo[];
 	marqueeText: string;
 	sponsors: TSponsorCard['sponsor'][];
 	sponsorshipDeckURL: string;
@@ -46,13 +46,14 @@ export type TSiteConfiguration = {
 	teamDescription: string[];
 	callToAction: TCallToAction;
 	showAgenda: boolean;
+	showVenue: boolean;
 	speakers: TConferenceSpeaker['speaker'][];
 	speakerDeckURL: string;
 	speakerCTA: string;
 	pastEditions: PEditionCard['session'][];
 	pastEditionsCTA: string;
 	pastEditionURL: string;
-	faqs: PFaqInfo[];
+
 	callForSpeakers: TCallForSpeakers;
 	pastEditionCategoryFilters: string[];
 };
@@ -199,9 +200,4 @@ export type TConferenceSpeaker = {
 
 export type PEditionCard = {
 	link: string;
-};
-
-export type PFaqInfo = {
-	question: string;
-	answer: string;
 };

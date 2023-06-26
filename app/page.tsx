@@ -14,7 +14,7 @@ import { siteConfiguration } from '@/config/siteConfig';
 import PastEditions from '@/components/pastEdition/PastEdition';
 
 export default function Home() {
-	const { showAgenda } = siteConfiguration;
+	const { showAgenda, showVenue } = siteConfiguration;
 	return (
 		<>
 			<Jumbotron />
@@ -47,9 +47,11 @@ export default function Home() {
 				</section>
 			) : null}
 			<SpatialPeople />
-			<section id="#venue">
-				<Venue />
-			</section>
+			{showVenue ? (
+				<section id="#venue">
+					<Venue />
+				</section>
+			) : null}
 			<CallToAction />
 		</>
 	);

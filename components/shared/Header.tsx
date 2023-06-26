@@ -1,15 +1,17 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { siteConfiguration } from '@/config/siteConfig';
 import Image from 'next/image';
 import Button from './Button';
 import MenuIcon from '../icons/MenuIcon';
 import CloseIcon from '../icons/CloseIcon';
 import Link from 'next/link';
+import { useHash } from '@/hooks/useHash';
 
 const Header = () => {
 	const { header } = siteConfiguration;
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
+	const [hash, updateHash] = useHash();
 
 	const handleMobileMenu = () => {
 		if (showMobileMenu === false) {
@@ -24,7 +26,6 @@ const Header = () => {
 	};
 
 	const [isScrolled, setIsScrolled] = useState(false);
-
 	useEffect(() => {
 		const handleScroll = () => {
 			if (window.scrollY > 1) {
@@ -37,6 +38,12 @@ const Header = () => {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
+
+	useEffect(() => {
+		document.getElementById(hash.toString().split('/')[1])?.scrollIntoView({
+			behavior: 'smooth',
+		});
+	}, [hash]);
 
 	// get Current year
 	const year = new Date().getFullYear();
@@ -52,9 +59,9 @@ const Header = () => {
 			} w-full laptop:grid-cols-12 laptop:w-full tv:max-w-screen-tv tv:mx-auto grid-cols-2 laptop:items-center laptop:px-24 px-6 laptop:py-[22px] tablet:px-14 py-4`}
 		>
 			<div className="laptop:col-span-2 col-span-1">
-				<a href={header.conferenceLogo.route} className="z-50 relative">
+				<Link href={header.conferenceLogo.route} className="z-50 relative">
 					<Image src={header.conferenceLogo.logo} alt="logo" />
-				</a>
+				</Link>
 			</div>
 			<div
 				className={`fixed laptop:relative z-40  transition-all delay-150 ease-in-out top-0 ${
@@ -67,16 +74,16 @@ const Header = () => {
 							return (
 								link.isActive && (
 									<li key={index} className=" px-4 py-3">
-										<Link
-											href={{ pathname: '/', hash: link.route }}
-											className=" text-white font-p-semibold"
+										<span
+											className=" text-white cursor-pointer font-p-semibold"
 											onClick={() => {
 												setShowMobileMenu(false);
+												updateHash(`${link.route}`);
 												document.body.style.overflow = 'unset';
 											}}
 										>
 											{link.text}
-										</Link>
+										</span>
 									</li>
 								)
 							);
