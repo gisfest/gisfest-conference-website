@@ -27,7 +27,7 @@ export default function PastEditions() {
 				</div>*/}
 			</div>
 			<div>
-				<div className="flex flex-nowrap  justisfy-between gap-[10px] tablet:gap-8 overflow-x-scroll">
+				<div className="flex flex-nowrap  justisfy-between gap-[10px] tablet:gap-8 overflow-x-auto pb-1">
 					{pastEditions.map((session, id) => (
 						<PastEditionCard key={`session-${id}`} session={session} />
 					))}
