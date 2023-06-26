@@ -5,7 +5,7 @@ import PastEditionCard from './PastEditionCard';
 import Link from 'next/link';
 
 export default function PastEditons() {
-	const { pasteditions, pastEditionURL, pastEditionsCTA } = siteConfiguration;
+	const { pastEditions, pastEditionURL, pastEditionsCTA } = siteConfiguration;
 
 	return (
 		<div className="flex flex-col gap-y-10">
@@ -24,7 +24,7 @@ export default function PastEditons() {
 			</div>
 
 			<div className="grid grid-flow-row grid-cols-1 gap-10 tablet:grid-cols-1 laptop:grid-cols-2 tv:grid-cols-3">
-				{pasteditions.map((session, id) => (
+				{pastEditions.map((session, id) => (
 					<PastEditionCard key={`session-${id}`} session={session} />
 				))}
 			</div>

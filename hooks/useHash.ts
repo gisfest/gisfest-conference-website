@@ -1,11 +1,21 @@
+import { usePathname, useRouter } from 'next/navigation';
 import React from 'react';
 
 // src- https://www.30secondsofcode.org/react/s/use-hash/
 export const useHash = () => {
 	const [hash, setHash] = React.useState('');
-
+	const path = usePathname();
+	const router = useRouter();
 	const hashChangeHandler = React.useCallback(() => {
-		setHash(window.location.hash);
+		if (path !== '/') {
+			const hash = window.location.hash;
+			router.replace('/');
+			setTimeout(() => {
+				setHash(hash);
+			}, 1000);
+		} else {
+			setHash(window.location.hash);
+		}
 	}, []);
 
 	React.useEffect(() => {
@@ -15,8 +25,8 @@ export const useHash = () => {
 			window.removeEventListener('hashchange', hashChangeHandler);
 		};
 	}, []);
-
-	const updateHash = React.useCallback(
+	//adding any here to prevent the type error on the Header component
+	const updateHash: any = React.useCallback(
 		(newHash: any) => {
 			if (newHash !== hash) window.location.hash = newHash;
 		},

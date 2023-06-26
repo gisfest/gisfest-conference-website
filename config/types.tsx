@@ -50,10 +50,12 @@ export type TSiteConfiguration = {
 	speakers: TConferenceSpeaker['speaker'][];
 	speakerDeckURL: string;
 	speakerCTA: string;
-	pastEditions: PEditionCard['session'][];
 	pastEditionsCTA: string;
 	pastEditionURL: string;
-
+	pastEditions: {
+		link: string;
+		category: string;
+	}[];
 	callForSpeakers: TCallForSpeakers;
 	pastEditionCategoryFilters: string[];
 };

@@ -40,7 +40,7 @@ const Header = () => {
 	}, []);
 
 	useEffect(() => {
-		document.getElementById(hash.toString().split('/')[1])?.scrollIntoView({
+		document.getElementById(hash)?.scrollIntoView({
 			behavior: 'smooth',
 		});
 	}, [hash]);

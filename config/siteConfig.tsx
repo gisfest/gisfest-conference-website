@@ -24,7 +24,7 @@ import LogoWhite from '@/public/assets/logos/logo-white.svg';
 
 const sponsorshipDeck =
 	'https://drive.google.com/file/d/1pIW3-Bf6lW0HXjwWxMalfQq5otFXKekc/view';
-const speakerDeck = 'https://downloadurl.com';
+const speakerURL = '/cfs';
 const speakerCTA = 'Join our Speakers';
 const pastEditionCTA = 'Explore Past Edition';
 const pastEditionURL = '/past-edition';
@@ -41,12 +41,12 @@ export const siteConfiguration: TSiteConfiguration = {
 		navigationLinks: [
 			{
 				text: 'About',
-				route: '/#about',
+				route: 'about',
 				isActive: true,
 			},
 			{
 				text: 'Sponsors',
-				route: '/#sponsors',
+				route: 'sponsors',
 				isActive: true,
 			},
 			{
@@ -62,8 +62,8 @@ export const siteConfiguration: TSiteConfiguration = {
 		],
 		navigationButtons: [
 			{
-				text: 'Sponsor GISfest2023',
-				route: '#sponsors',
+				text: 'Submit a Talk',
+				route: '/cfs',
 				isActive: true,
 			},
 			{
@@ -520,7 +520,7 @@ export const siteConfiguration: TSiteConfiguration = {
 		},
 	},
 
-	speakerDeckURL: speakerDeck,
+	speakerDeckURL: speakerURL,
 	speakerCTA: speakerCTA,
 	speakers: [
 		{

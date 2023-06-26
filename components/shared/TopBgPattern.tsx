@@ -6,7 +6,7 @@ const TopBgPattern = ({
 	variant = 'right',
 	pageTitle,
 }: {
-	variant: 'right' | 'center';
+	variant?: 'right' | 'center';
 	pageTitle?: string;
 }) => {
 	return (

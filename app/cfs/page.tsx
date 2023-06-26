@@ -3,11 +3,11 @@
 import CallToAction from '@/components/CTA';
 import CallForSpeakersContent from '@/app/contents/cfs.mdx';
 import { MDXProvider } from '@mdx-js/react';
-import type { Metadata } from 'next';
+
 import TopBgPattern from '@/components/shared/TopBgPattern';
 import List from '@/components/mdx/Lists';
 
-const components = {
+const components: any = {
 	li: List,
 };
 
@@ -25,21 +25,3 @@ export default function CallForSpeakers() {
 		</>
 	);
 }
-
-const pageTitle = 'Call for Speakers | GISfest 2023 Conference';
-const pageDescription = 'Submit your sessions in GISfest...';
-
-//todo - dynamically generate og url
-export const metadata: Metadata = {
-	title: pageTitle,
-	openGraph: {
-		title: pageTitle,
-		description: pageDescription,
-		url: 'https://www.gisfest.org/cfs',
-	},
-
-	twitter: {
-		title: pageTitle,
-		description: pageDescription,
-	},
-};
