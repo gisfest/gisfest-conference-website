@@ -12,7 +12,7 @@ export const ConferenceEditions: TConferenceEdition[] = [
 		hashtag: '#GISfest2022',
 		active: false,
 		date: '11 - 12th Nov. 2022',
-		location: 'Online',
+		location: 'Online (Zoom)',
 		url: 'https://2022.gisfest.org',
 	},
 ];
