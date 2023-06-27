@@ -11,9 +11,10 @@ import TakeAway from '@/components/takeAway/TakeAway';
 import Speakers from '@/components/speakers/Speakers';
 import CallToAction from '@/components/CTA';
 import { siteConfiguration } from '@/config/siteConfig';
+import PastEditions from '@/components/pastEdition/PastEdition';
 
 export default function Home() {
-	const { showAgenda } = siteConfiguration;
+	const { showAgenda, showVenue } = siteConfiguration;
 	return (
 		<>
 			<Jumbotron />
@@ -31,7 +32,9 @@ export default function Home() {
 			</section>
 
 			<MarqueeText />
-
+			<section id="#past-edition">
+				<PastEditions />
+			</section>
 			<section id="#sponsors">
 				<Sponsors />
 			</section>
@@ -44,9 +47,11 @@ export default function Home() {
 				</section>
 			) : null}
 			<SpatialPeople />
-			<section id="#venue">
-				<Venue />
-			</section>
+			{showVenue ? (
+				<section id="#venue">
+					<Venue />
+				</section>
+			) : null}
 			<CallToAction />
 		</>
 	);

@@ -15,11 +15,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html
-			lang="en"
-			className={`${montserrat.variable} bg-sc-0 font-sans scroll-smooth`}
-		>
-			<body className='laptop:relative'>
+		<html lang="en" className={`${montserrat.variable} bg-sc-0 font-sans `}>
+			<body className="laptop:relative">
 				<Header />
 				<main className="wrapper">{children}</main>
 			</body>

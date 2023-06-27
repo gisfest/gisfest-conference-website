@@ -1,8 +1,9 @@
 import React from 'react';
-
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import bgIsolation from '@/public/assets/bg-patterns/bg-isolation.svg';
 import Team from '@/components/team/Team';
+
 const TeamPage = () => {
 	return (
 		<div className="w-full ">
@@ -21,3 +22,9 @@ const TeamPage = () => {
 };
 
 export default TeamPage;
+
+const pageTitle = 'Organizing Team | GISfest 2023 Conference';
+
+export const metadata: Metadata = {
+	title: pageTitle,
+};

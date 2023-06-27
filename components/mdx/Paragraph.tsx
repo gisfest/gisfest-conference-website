@@ -1,7 +1,11 @@
-export default function ParaGraph({ content }: { content: string }) {
+export default function ParaGraph({
+	children,
+}: {
+	children: React.ReactElement;
+}) {
 	return (
-		<p className="text-tc-0 font-p-regular text-body laptop:text-h5 markdown-bg ">
-			{content}
+		<p className="markdown-bg  text-tc-0 font-p-regular text-body laptop:text-h5">
+			{children}
 		</p>
 	);
 }

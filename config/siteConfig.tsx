@@ -4,6 +4,16 @@ import spatialLove from '@/public/assets/icons/Love-shape.svg';
 import VenueImageOne from '@/public/assets/images/venue/image1.png';
 import VenueImageThree from '@/public/assets/images/venue/image3.png';
 import VenueImageTwo from '@/public/assets/images/venue/image2.png';
+import EmekaIgweAvatar from '@/public/assets/images/team/emeka-igwe.jpg';
+import EmmanuelJolaiyaAvatar from '@/public/assets/images/team/emmanuel-jolaiya.jpg';
+import JuwonIsholaAvatar from '@/public/assets/images/team/juwon-ishola.jpg';
+import MercyAkintolaAvatar from '@/public/assets/images/team/mercy-akintola.jpg';
+import OluwadamilolaSalauAvatar from '@/public/assets/images/team/oluwadamilola-salau.jpg';
+import OmowonuolaAkintolaAvatar from '@/public/assets/images/team/omowonuola_akintola.jpg';
+import SheuhMuhammedAvatar from '@/public/assets/images/team/shehu-muhammed.jpg';
+import VictorAdemoyeroAvatar from '@/public/assets/images/team/victor-ademoyero.jpg';
+import MichaelOlanrewajuAvatar from '@/public/assets/images/team/michael-olanrewaju.jpg';
+import bensonAvatar from '@/public/assets/images/team/bensonAvatar.jpeg';
 import {
 	AgendaCategory,
 	SponsorCategory,
@@ -14,8 +24,11 @@ import LogoWhite from '@/public/assets/logos/logo-white.svg';
 
 const sponsorshipDeck =
 	'https://drive.google.com/file/d/1pIW3-Bf6lW0HXjwWxMalfQq5otFXKekc/view';
-const speakerDeck = '/cfs';
+const speakerURL = '/cfs';
 const speakerCTA = 'Join our Speakers';
+const pastEditionCTA = 'Explore Past Edition';
+const pastEditionURL = '/past-edition';
+
 export const siteConfiguration: TSiteConfiguration = {
 	/********  homePage  ***********/
 
@@ -38,19 +51,19 @@ export const siteConfiguration: TSiteConfiguration = {
 			},
 			{
 				text: 'Speakers',
-				route: 'speakers',
+				route: '/#speakers',
 				isActive: false,
 			},
 			{
 				text: 'Agenda',
-				route: 'agenda',
+				route: '/#agenda',
 				isActive: false,
 			},
 		],
 		navigationButtons: [
 			{
-				text: 'Sponsor GISfest2023',
-				route: '#sponsors',
+				text: 'Submit a Talk',
+				route: '/cfs',
 				isActive: true,
 			},
 			{
@@ -127,7 +140,7 @@ export const siteConfiguration: TSiteConfiguration = {
 
 	// FAQ
 
-	faq: [
+	faqs: [
 		{
 			question: 'Who can attend',
 			answer:
@@ -209,7 +222,7 @@ export const siteConfiguration: TSiteConfiguration = {
 		},
 	],
 
-	showAgenda: true,
+	showAgenda: false,
 	// Agenda
 	agenda: [
 		{
@@ -222,15 +235,18 @@ export const siteConfiguration: TSiteConfiguration = {
 					id: 101,
 					time: '10:00am',
 					category: AgendaCategory.workshop,
-					title: 'Creating community, empowering underrepresented geospatial professionals at Women in Geospatial',
-					abstract: "Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.",
+					title:
+						'Creating community, empowering underrepresented geospatial professionals at Women in Geospatial',
+					abstract:
+						'Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.',
 					speakers: [
 						{
 							name: 'Cameron Williamson',
 							role: 'Product Evanlegist',
-							avatar: '/assets/images/defaultSpeaker.svg',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 					],
 				},
@@ -239,12 +255,13 @@ export const siteConfiguration: TSiteConfiguration = {
 					category: AgendaCategory.Keynote,
 					time: '00:00am',
 					title: 'Opening Session',
-					abstract: "Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.",
+					abstract:
+						'Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.',
 					speakers: [
 						{
 							name: 'GISfest2023 Team',
 							role: 'Organizers',
-							avatar: '/assets/images/defaultSpeaker.svg',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'GISfest2023',
 							sociallink: '',
 						},
@@ -254,15 +271,18 @@ export const siteConfiguration: TSiteConfiguration = {
 					id: 103,
 					category: AgendaCategory.workshop,
 					time: '10:00am',
-					title:'Web GIS: An Introduction to ArcGIS Online and ArcGIS Enterprise',
-					abstract: "Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.",
+					title:
+						'Web GIS: An Introduction to ArcGIS Online and ArcGIS Enterprise',
+					abstract:
+						'Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.',
 					speakers: [
 						{
 							name: 'Darrell Steward',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 					],
 				},
@@ -271,28 +291,32 @@ export const siteConfiguration: TSiteConfiguration = {
 					category: AgendaCategory.workshop,
 					time: '10:00am',
 					title: 'Participatory mapping',
-					abstract: "Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.",
+					abstract:
+						'Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.',
 					speakers: [
 						{
 							name: 'Darrell Steward',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: null,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 						{
 							name: 'Saannah Nguyen',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: null,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 						{
 							name: 'Blessie Cooper',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: null,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 					],
 				},
@@ -301,7 +325,6 @@ export const siteConfiguration: TSiteConfiguration = {
 					time: '10:00am',
 					title: 'Networking ',
 					category: AgendaCategory.network,
-					
 				},
 			],
 		},
@@ -316,14 +339,16 @@ export const siteConfiguration: TSiteConfiguration = {
 					category: AgendaCategory.panelSession,
 					time: '12:00am',
 					title: 'Geospatial AI',
-					abstract: "Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.",
+					abstract:
+						'Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.',
 					speakers: [
 						{
 							name: 'Cemeron Williamson',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 					],
 				},
@@ -337,9 +362,10 @@ export const siteConfiguration: TSiteConfiguration = {
 						{
 							name: 'Darrell Steward',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 					],
 				},
@@ -348,28 +374,32 @@ export const siteConfiguration: TSiteConfiguration = {
 					category: AgendaCategory.panelSession,
 					time: '10:00am',
 					title: 'AI and GIS',
-					abstract: "Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.",
+					abstract:
+						'Lorem ipsum dolor sit amet consectetur. Porttitor pellentesque a ac tortor amet pretium. Gravida amet felis enim sapien cras sed lacinia. Morbi ac volutpat neque viverra urna. Ac nisl curabitur eu suspendisse elit. Non at sollicitudin malesuada ut proin. In quis enim ipsum nulla nibh et sed ultrices. Fusce augue in molestie blandit commodo volutpat netus. Nam eget pulvinar mattis nulla arcu ut. Cursus proin purus sed pretium. Maecenas diam mi euismod odio vestibulum iaculis non mattis. Ac sit netus eget pellentesque in vivamus at feugiat. Pellentesque id ut dapibus viverra adipiscing venenatis mattis. Ullamcorper tellus pellentesque porttitor pellentesque maecenas enim. Sodales facilisi et venenatis sagittis pharetra convallis.',
 					speakers: [
 						{
 							name: 'Darrell Steward',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 						{
 							name: 'Saannah Nguyen',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 						{
 							name: 'Blessie Cooper',
 							role: 'Product Evanlegist',
-							avatar: '',
+							avatar: EmmanuelJolaiyaAvatar,
 							company: 'Dealcode',
-							sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+							sociallink:
+								'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
 						},
 					],
 				},
@@ -384,7 +414,7 @@ export const siteConfiguration: TSiteConfiguration = {
 	],
 
 	// Venue
-
+	showVenue: false,
 	venueImages: [
 		{ path: VenueImageOne, alt: 'Image One' },
 		{ path: VenueImageTwo, alt: 'Image One' },
@@ -403,66 +433,66 @@ export const siteConfiguration: TSiteConfiguration = {
 			teamMembers: [
 				{
 					fullName: 'Emmanuel jolaiya',
-					twitter: '@jeafreezy',
-					linkedIn: 'https://www.twitter.com/jeafreezy',
+					twitter: '@emmanueljolaiya',
+					linkedIn: 'https://www.linkedin.com/in/emmanueljolaiya/',
 					teamName: 'Design & Tech.(Lead)',
-					avatar: '/assets/images/team/emmanuel_jolaiya.jpg',
+					avatar: EmmanuelJolaiyaAvatar,
 				},
 				{
 					fullName: 'Victor Ademoyero',
 					twitter: '@victorademoyero',
 					linkedIn: 'https://www.linkedin.com/in/victorademoyero/',
 					teamName: 'Design & Tech.',
-					avatar: '/assets/images/team/victor-ademoyero.jpg',
+					avatar: VictorAdemoyeroAvatar,
 				},
 				{
 					fullName: 'Michael Olanrewaju',
 					twitter: '@michaelolanrewaju',
 					linkedIn: 'https://www.linkedin.com/in/michaelolanrewaju/',
 					teamName: 'Design & Tech.',
-					avatar: '/assets/images/team/michael_olanrewaju.jpg',
+					avatar: MichaelOlanrewajuAvatar,
 				},
 				{
 					fullName: 'Mercy Akintola',
 					twitter: '@mercyakintola',
 					linkedIn: 'https://www.linkedin.com/in/mercyakintola/',
 					teamName: 'Logistics (Lead)',
-					avatar: '/assets/images/team/mercy-akintola.jpg',
+					avatar: MercyAkintolaAvatar,
 				},
 				{
 					fullName: 'Juwon Ishola',
 					twitter: '@juwonishola',
 					linkedIn: 'https://www.linkedin.com/in/juwonishola/',
 					teamName: 'Media',
-					avatar: '/assets/images/team/juwon-ishola.jpg',
+					avatar: JuwonIsholaAvatar,
 				},
 				{
 					fullName: 'Shehu Muhammed',
 					twitter: '@shehumuhammed',
 					linkedIn: 'https://www.linkedin.com/in/shehumuhammed/',
 					teamName: 'Media',
-					avatar: '/assets/images/team/shehu-muhammed.jpg',
+					avatar: SheuhMuhammedAvatar,
 				},
 				{
 					fullName: 'Emeka Igwe',
 					twitter: '@emekaigwe',
 					linkedIn: 'https://www.linkedin.com/in/juwonishola/',
 					teamName: 'Speakers Engagement',
-					avatar: '/assets/images/team/emeka-igwe.jpg',
+					avatar: EmekaIgweAvatar,
 				},
 				{
 					fullName: 'Omowonuola Akintola',
 					twitter: '@omowonuolaakintola',
 					linkedIn: 'https://www.linkedin.com/in/omowonuolaakintola/',
-					teamName: 'Sponsorship',
-					avatar: '/assets/images/team/omowonuola_akintola.jpg',
+					teamName: 'Speakers Engagement',
+					avatar: OmowonuolaAkintolaAvatar,
 				},
 				{
 					fullName: 'Oluwadamilola Salau',
 					twitter: '@shehumuhammed',
 					linkedIn: 'https://www.linkedin.com/in/shehumuhammed/',
-					teamName: 'Budget',
-					avatar: '/assets/images/team/oluwadamilola-salau.jpg',
+					teamName: 'Logistics & Budget',
+					avatar: OluwadamilolaSalauAvatar,
 				},
 			],
 		},
@@ -470,39 +500,18 @@ export const siteConfiguration: TSiteConfiguration = {
 			category: TeamCategory.Volunteers,
 			teamMembers: [
 				{
-					fullName: 'Courtney Henry',
-					twitter: '@shehumuhammed',
-					linkedIn: 'https://www.linkedin.com/in/shehumuhammed/',
-					teamName: 'Media',
-					avatar: '/assets/images/speakers/courtney.png',
-				},
-				{
-					fullName: 'Annette Black',
-					twitter: '@shehumuhammed',
-					linkedIn: 'https://www.linkedin.com/in/shehumuhammed/',
+					fullName: 'Iniobong Benson',
+					twitter: '',
+					linkedIn: 'https://www.linkedin.com/in/linibenson/',
 					teamName: 'Design & Tech.',
-					avatar: '/assets/images/speakers/annette.png',
-				},
-				{
-					fullName: 'Marvin McKinney',
-					twitter: '@shehumuhammed',
-					linkedIn: 'https://www.linkedin.com/in/shehumuhammed/',
-					teamName: 'Budget',
-					avatar: '/assets/images/speakers/marvin.png',
-				},
-				{
-					fullName: 'Floyd Miles',
-					twitter: '@shehumuhammed',
-					linkedIn: 'https://www.linkedin.com/in/shehumuhammed/',
-					teamName: 'Logistics',
-					avatar: '/assets/images/speakers/floyd.png',
+					avatar: bensonAvatar,
 				},
 			],
 		},
 	],
 
 	callToAction: {
-		largeText: 'Ready to make history together?',	
+		largeText: 'Ready to make history together?',
 		ctaText: 'Become a Sponsor!',
 		button: {
 			text: 'Sponsorship Deck',
@@ -511,84 +520,107 @@ export const siteConfiguration: TSiteConfiguration = {
 		},
 	},
 
-	speakerDeckURL: speakerDeck,
+	speakerDeckURL: speakerURL,
 	speakerCTA: speakerCTA,
-	defaultSpeakerInfo: [
+	speakers: [
 		{
-			name: '',
-			role: 'Coming Soon!',
-			avatar: '/assets/images/defaultSpeaker.svg',
-			company: '',
+			name: 'Coming soon',
+			role: '',
+			avatar: null,
+			company: 'Coming soon',
 			sociallink: '',
 		},
 		{
-			name: '',
-			role: 'Coming Soon!',
-			avatar: '/assets/images/defaultSpeaker.svg',
-			company: '',
+			name: 'Coming soon',
+			role: '',
+			avatar: null,
+			company: 'Coming soon',
 			sociallink: '',
 		},
 		{
-			name: '',
-			role: 'Coming Soon!',
-			avatar: '/assets/images/defaultSpeaker.svg',
-			company: '',
+			name: 'Coming soon',
+			role: '',
+			avatar: null,
+			company: 'Coming soon',
 			sociallink: '',
 		},
 		{
-			name: '',
-			role: 'Coming Soon!',
-			avatar: '/assets/images/defaultSpeaker.svg',
-			company: '',
-			sociallink: '',
-		},
-		{
-			name: '',
-			role: 'Coming Soon!',
-			avatar: '/assets/images/defaultSpeaker.svg',
-			company: '',
-			sociallink: '',
-		},
-		{
-			name: '',
-			role: 'Coming Soon!',
-			avatar: '/assets/images/defaultSpeaker.svg',
-			company: '',
-			sociallink: '',
-		},
-		{
-			name: '',
-			role: 'Coming Soon!',
-			avatar: '/assets/images/defaultSpeaker.svg',
-			company: '',
-			sociallink: '',
-		},
-		{
-			name: '',
-			role: 'Coming Soon!',
-			avatar: '/assets/images/defaultSpeaker.svg',
-			company: '',
+			name: 'Coming soon',
+			role: '',
+			avatar: null,
+			company: 'Coming soon',
 			sociallink: '',
 		},
 	],
-	speakers: [
+
+	pastEditionsCTA: pastEditionCTA,
+	pastEditionURL: pastEditionURL,
+	pastEditionCategoryFilters: [
+		'All',
+		'Keynote Session',
+		'Workshop',
+		'Career Panel',
+		'Geo-Innovation',
+	],
+	pastEditions: [
 		{
-			name: 'Cameron Williamson',
-			role: 'Product Evanlegist',
-			avatar: '',
-			company: 'Dealcode',
-			sociallink: 'https://www.linkedin.com/in/oluwatobi-akinpelu-0b1b3b1b0/',
+			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
+			category: 'Keynote Session',
+		},
+		{
+			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
+			category: 'Keynote Session',
+		},
+		{
+			link: 'https://www.youtube.com/embed/dDn70QiifkE',
+			category: 'Geo-Innovation',
+		},
+		{
+			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
+			category: 'Geo-Innovation',
+		},
+		{
+			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
+			category: 'Geo-Innovation',
+		},
+		{
+			link: 'https://www.youtube.com/embed/dDn70QiifkE',
+			category: 'Workshop',
+		},
+		{
+			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
+			category: 'Workshop',
+		},
+		{
+			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
+			category: 'Workshop',
+		},
+		{
+			link: 'https://www.youtube.com/embed/dDn70QiifkE',
+			category: 'Workshop',
+		},
+		{
+			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
+			category: 'Workshop',
+		},
+		{
+			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
+			category: 'Career Panel',
+		},
+		{
+			link: 'https://www.youtube.com/embed/dDn70QiifkE',
+			category: 'Career Panel',
 		},
 	],
 
 	callForSpeakers: {
 		timeline: {
-			callOpen: '23 May 2023',
-			callClose: '25 September, 2023',
+			callOpen: '26th May 2023',
+			callClose: '25 August, 2023',
 		},
 		sessionSubmissionButton: {
 			text: 'Submit a session',
-			route: '',
+			route: 'https://forms.gle/7xXZUcqmGpS81sT17',
 		},
 	},
 };

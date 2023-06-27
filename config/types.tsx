@@ -1,5 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { SVGProps } from 'react';
+
 export type TConferenceEdition = {
 	hashtag: string;
 	location: string;
@@ -35,7 +36,7 @@ export type TSiteConfiguration = {
 	about: TAbout;
 	takeAway: TtakeAwayInfo[];
 	takeAwayAutoScrollDelay: number;
-	faq: TFaqInfo[];
+	faqs: TFaqInfo[];
 	marqueeText: string;
 	sponsors: TSponsorCard['sponsor'][];
 	sponsorshipDeckURL: string;
@@ -45,11 +46,18 @@ export type TSiteConfiguration = {
 	teamDescription: string[];
 	callToAction: TCallToAction;
 	showAgenda: boolean;
-	defaultSpeakerInfo: TConferenceSpeaker['speaker'][];
+	showVenue: boolean;
 	speakers: TConferenceSpeaker['speaker'][];
 	speakerDeckURL: string;
 	speakerCTA: string;
+	pastEditionsCTA: string;
+	pastEditionURL: string;
+	pastEditions: {
+		link: string;
+		category: string;
+	}[];
 	callForSpeakers: TCallForSpeakers;
+	pastEditionCategoryFilters: string[];
 };
 
 export interface TSVGProps extends SVGProps<SVGSVGElement> {
@@ -115,10 +123,10 @@ export type TAgendaCard = {
 	abstract?: string;
 	speakers?: {
 		name: string;
-	    role: string;
-		avatar: string,
-		company: string,
-		sociallink: string,
+		role: string;
+		avatar: StaticImageData | null;
+		company: string;
+		sociallink: string;
 	}[];
 };
 
@@ -164,7 +172,7 @@ export type teamMembers = {
 	twitter: string;
 	linkedIn: string;
 	teamName: string;
-	avatar: string;
+	avatar: StaticImageData;
 };
 
 export type conference = {
@@ -186,13 +194,12 @@ export type TConferenceSpeaker = {
 	speaker: {
 		name: string;
 		role: string;
-		avatar: string;
+		avatar: StaticImageData | null;
 		company: string;
 		sociallink: string;
 	};
 };
 
-export type tag = {
-	title: string;
-	style: string;
-}
+export type PEditionCard = {
+	link: string;
+};

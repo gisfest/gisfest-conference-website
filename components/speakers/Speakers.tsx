@@ -1,23 +1,18 @@
 import { siteConfiguration } from '@/config/siteConfig';
-import SpeakerCard from '../shared/SpeakerCard';
-import SectionHeader from '../shared/SectionHeader';
+import SpeakerCard from '@/components/shared/SpeakerCard';
+import SectionHeader from '@/components/shared/SectionHeader';
 import Link from 'next/link';
 
 export default function Speakers() {
-	const { speakers, defaultSpeakerInfo, speakerDeckURL, speakerCTA } =
-		siteConfiguration;
+	const { speakers, speakerDeckURL, speakerCTA } = siteConfiguration;
 
 	return (
 		<div className="flex flex-col gap-y-10 ">
 			<SectionHeader title="Speakers" layout="text-center" />
 			<div className="grid grid-flow-row grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-10 tv:grid-cols-4">
-				{speakers.length === 1
-					? defaultSpeakerInfo.map((speaker, id) => (
-							<SpeakerCard key={`speaker-${id}`} speaker={speaker} />
-					  ))
-					: speakers.map((speaker, id) => (
-							<SpeakerCard key={`speaker-${id}`} speaker={speaker} />
-					  ))}
+				{speakers.map((speaker, id) => (
+					<SpeakerCard key={`speaker-${id}`} speaker={speaker} />
+				))}
 			</div>
 			<div className="flex flex-col tablet:flex-row gap-10 w-full tablet:p-6 laptop:p-20 ">
 				<div className="tablet:basis:1/2 laptop:basis-1/3  p-2">

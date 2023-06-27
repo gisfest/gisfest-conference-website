@@ -1,29 +1,35 @@
+'use client';
+
 import CallToAction from '@/components/CTA';
 import CallForSpeakersContent from '@/app/contents/cfs.mdx';
-import type { Metadata } from 'next';
+import { MDXProvider } from '@mdx-js/react';
+
+import TopBgPattern from '@/components/shared/TopBgPattern';
+import { ListItem, UnOrderedList } from '@/components/mdx/Lists';
+import ParaGraph from '@/components/mdx/Paragraph';
+import { HeadingOne, HeadingTwo } from '@/components/mdx/Heading';
+import Timeline from '@/components/mdx/Timeline';
+
+const components: any = {
+	li: ListItem,
+	ul: UnOrderedList,
+	p: ParaGraph,
+	h1: HeadingOne,
+	h2: HeadingTwo,
+};
+
 export default function CallForSpeakers() {
 	return (
-		<div className="flex flex-col gap-10">
-			<CallForSpeakersContent />
-			<CallToAction />
-		</div>
+		<>
+			<TopBgPattern variant="center" pageTitle="Call for Speakers" />
+
+			<div className="flex flex-col gap-10">
+				<MDXProvider components={components}>
+					<CallForSpeakersContent />
+					<Timeline />
+				</MDXProvider>
+				<CallToAction />
+			</div>
+		</>
 	);
 }
-
-const pageTitle = 'Call for Speakers | GISfest 2023 Conference';
-const pageDescription = 'Submit your sessions in GISfest...';
-
-//todo - dynamically generate og url
-export const metadata: Metadata = {
-	title: pageTitle,
-	openGraph: {
-		title: pageTitle,
-		description: pageDescription,
-		url: 'https://www.gisfest.org/cfs',
-	},
-
-	twitter: {
-		title: pageTitle,
-		description: pageDescription,
-	},
-};
