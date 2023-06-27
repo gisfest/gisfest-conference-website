@@ -5,14 +5,14 @@ import CallForSpeakersContent from '@/app/contents/cfs.mdx';
 import { MDXProvider } from '@mdx-js/react';
 
 import TopBgPattern from '@/components/shared/TopBgPattern';
-import List from '@/components/mdx/Lists';
+import { ListItem, UnOrderedList } from '@/components/mdx/Lists';
 import ParaGraph from '@/components/mdx/Paragraph';
 import { HeadingOne, HeadingTwo } from '@/components/mdx/Heading';
 import Timeline from '@/components/mdx/Timeline';
 
 const components: any = {
-	li: List,
-
+	li: ListItem,
+	ul: UnOrderedList,
 	p: ParaGraph,
 	h1: HeadingOne,
 	h2: HeadingTwo,
