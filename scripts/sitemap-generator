@@ -1,6 +1,7 @@
 const fs = require("fs");
 const globby = require("globby");
 const prettier= require("prettier");
+
 (async () => {
 
   const pages = await globby([
@@ -19,7 +20,7 @@ const prettier= require("prettier");
                 const priority = indexPath ? "<priority>1.00</priority>" : "<priority>0.80</priority>";
                 return `
                         <url>
-                            <loc>${`https://gisfest.org/${route}`}</loc>
+                            <loc>${`https://2022.gisfest.org/${route}`}</loc>
                             <lastmod>${new Date().toISOString()}</lastmod>
                             ${changeFreq}
                             ${priority}
