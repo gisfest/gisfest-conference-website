@@ -615,7 +615,7 @@ export const siteConfiguration: TSiteConfiguration = {
 
 	callForSpeakers: {
 		timeline: {
-			callOpen: '26th June 2023',
+			callOpen: '26th June, 2023',
 			callClose: '4th August, 2023',
 		},
 		sessionSubmissionButton: {
