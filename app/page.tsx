@@ -11,45 +11,48 @@ import TakeAway from '@/components/takeAway/TakeAway';
 import Speakers from '@/components/speakers/Speakers';
 import CallToAction from '@/components/CTA';
 import { siteConfiguration } from '@/config/siteConfig';
+import PastEditions from '@/components/pastEdition/PastEdition';
 
 export default function Home() {
-	const { showAgenda } = siteConfiguration;
+	const { showAgenda, showVenue } = siteConfiguration;
 	return (
 		<>
-			<div className="wrapper">
-				<Jumbotron />
-				<section id="#conferenceType">
-					<ConferenceType />
-				</section>
-				<section id="#about">
-					<About />
-				</section>
-				<section id="#takeaway">
-					<TakeAway />
-				</section>
-				<section id="#faq">
-					<FAQ />
-				</section>
-			</div>
+			<Jumbotron />
+			<section id="#conferenceType">
+				<ConferenceType />
+			</section>
+			<section id="#about">
+				<About />
+			</section>
+			<section id="#takeaway">
+				<TakeAway />
+			</section>
+			<section id="#faq">
+				<FAQ />
+			</section>
+
 			<MarqueeText />
-			<div className="wrapper">
-				<section id="#sponsors">
-					<Sponsors />
+			<section id="#past-edition">
+				<PastEditions />
+			</section>
+			<section id="#sponsors">
+				<Sponsors />
+			</section>
+			<section id="#speakers">
+				<Speakers />
+			</section>
+			{showAgenda ? (
+				<section id="#agenda">
+					<Agenda />
 				</section>
-				<section id="#speakers">
-					<Speakers />
-				</section>
-				{showAgenda ? (
-					<section id="#agenda">
-						<Agenda />
-					</section>
-				) : null}
-				<SpatialPeople />
+			) : null}
+			<SpatialPeople />
+			{showVenue ? (
 				<section id="#venue">
 					<Venue />
 				</section>
-				<CallToAction />
-			</div>
+			) : null}
+			<CallToAction />
 		</>
 	);
 }

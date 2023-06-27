@@ -3,18 +3,18 @@ import TwitterIcon from '@/components/icons/TwitterIcon';
 import LinkedInIcon from '@/components/icons/LinkedInIcon';
 import Link from 'next/link';
 import Image from 'next/image';
-
+import defaultAvatar from '@/public/assets/images/defaultAvatar.png';
 const SpeakerCard = ({ speaker }: TConferenceSpeaker) => {
 	return (
 		<div className="col-span-1 flex flex-col items-center text-center">
 			<div className="relative rounded-tl-[240px] rounded-br-[240px] rounded-bl-[240px] rounded-tr-2xl h-[175.75px] w-[176.19px] bg-gradient-to-r p-[1.4px] from-[#F5A627] via-[#995CA4] to-[#CE3573]">
 				<div className="relative rounded-tl-[240px] rounded-br-[240px] rounded-bl-[240px] rounded-tr-2xl h-full w-full overflow-hidden ring-1 ring-white border border-b-[#F5A627] border-l-[#F5A627] border-t-[#995CA4] border-r-[#CE3573]">
 					<Image
-						src={speaker.avatar}
+						src={speaker.avatar ?? defaultAvatar}
 						alt={speaker.name}
 						fill
-						// placeholder="blur" - Please uncomment after changing the team image to png/jpeg @vikkystickz
-						className="object-cover rounded-tl-[240px] rounded-br-[240px] rounded-bl-[240px] rounded-tr-2xl w-full h-full transition-transform duration-300 hover:scale-125"
+						placeholder="blur"
+						className="object-cover rounded-tl-[240px] rounded-br-[240px] rounded-bl-[240px] rounded-tr-2xl w-auto h-auto transition-transform duration-300 hover:scale-125"
 					/>
 				</div>
 				{speaker.sociallink && (

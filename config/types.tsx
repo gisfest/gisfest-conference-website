@@ -1,5 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { SVGProps } from 'react';
+
 export type TConferenceEdition = {
 	hashtag: string;
 	location: string;
@@ -17,6 +18,17 @@ type TCallToAction = {
 		showArrow: boolean;
 	};
 };
+
+type TCallForSpeakers = {
+	timeline: {
+		callOpen: string;
+		callClose: string;
+	};
+	sessionSubmissionButton: {
+		text: string;
+		route: string;
+	};
+};
 export type TSiteConfiguration = {
 	header: THeader['header'];
 	conferenceType: TConferenceType;
@@ -24,7 +36,7 @@ export type TSiteConfiguration = {
 	about: TAbout;
 	takeAway: TtakeAwayInfo[];
 	takeAwayAutoScrollDelay: number;
-	faq: TFaqInfo[];
+	faqs: TFaqInfo[];
 	marqueeText: string;
 	sponsors: TSponsorCard['sponsor'][];
 	sponsorshipDeckURL: string;
@@ -34,10 +46,18 @@ export type TSiteConfiguration = {
 	teamDescription: string[];
 	callToAction: TCallToAction;
 	showAgenda: boolean;
-	defaultSpeakerInfo: TConferenceSpeaker['speaker'][];
-	speakers: TConferenceSpeaker['speaker'][],
+	showVenue: boolean;
+	speakers: TConferenceSpeaker['speaker'][];
 	speakerDeckURL: string;
 	speakerCTA: string;
+	pastEditionsCTA: string;
+	pastEditionURL: string;
+	pastEditions: {
+		link: string;
+		category: string;
+	}[];
+	callForSpeakers: TCallForSpeakers;
+	pastEditionCategoryFilters: string[];
 };
 
 export interface TSVGProps extends SVGProps<SVGSVGElement> {
@@ -85,9 +105,10 @@ export type TSponsorCard = {
 };
 
 export enum AgendaCategory {
-	workshop = 'workshop',
+	workshop = 'Workshop',
 	panelSession = 'Panel Session',
 	Keynote = 'Keynote',
+	network = 'Network',
 }
 export enum TeamCategory {
 	Organizing = 'Organizing',
@@ -96,11 +117,16 @@ export enum TeamCategory {
 
 export type TAgendaCard = {
 	category?: AgendaCategory;
+	id: number;
 	time: string;
-
 	title: string;
+	abstract?: string;
 	speakers?: {
 		name: string;
+		role: string;
+		avatar: StaticImageData | null;
+		company: string;
+		sociallink: string;
 	}[];
 };
 
@@ -146,7 +172,7 @@ export type teamMembers = {
 	twitter: string;
 	linkedIn: string;
 	teamName: string;
-	avatar: string;
+	avatar: StaticImageData;
 };
 
 export type conference = {
@@ -159,20 +185,21 @@ export type conference = {
 };
 
 export type TJumbotron = {
-	heroImage: StaticImageData,
-	conference: conference,
-	heroButtons: navigationLinks[]
-
-}
+	heroImage: StaticImageData;
+	conference: conference;
+	heroButtons: navigationLinks[];
+};
 
 export type TConferenceSpeaker = {
 	speaker: {
 		name: string;
 		role: string;
-		avatar: string;
+		avatar: StaticImageData | null;
 		company: string;
 		sociallink: string;
-
 	};
+};
 
+export type PEditionCard = {
+	link: string;
 };
