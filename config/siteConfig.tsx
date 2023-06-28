@@ -144,7 +144,7 @@ export const siteConfiguration: TSiteConfiguration = {
 		{
 			question: 'Who can attend',
 			answer:
-				'Geospatial enthusiasts, students, engineers, analysts, technicians, developers, managers, and anyone who uses geospatial data and/or technology',
+				'Geospatial enthusiasts, students, engineers, analysts, technicians, developers, managers, and anyone who uses geospatial data and/or technology.',
 		},
 		{
 			question: 'What to Expect',
@@ -152,7 +152,7 @@ export const siteConfiguration: TSiteConfiguration = {
 				'Discover the latest tools and techniques, learn about real-world applications in a variety of industries, and connect with like-minded individuals from all over Africa.',
 		},
 		{
-			question: 'Who can attend',
+			question: 'Why you should attend',
 			answer:
 				'Be part of the conversation on the future of geospatial technology and discover how it can revolutionize the way we work, live, and interact with the world around us.',
 		},
