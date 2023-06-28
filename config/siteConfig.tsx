@@ -147,7 +147,7 @@ export const siteConfiguration: TSiteConfiguration = {
 				'Geospatial enthusiasts, students, engineers, analysts, technicians, developers, managers, and anyone who uses geospatial data and/or technology.',
 		},
 		{
-			question: 'What to Expect',
+			question: 'What to expect',
 			answer:
 				'Discover the latest tools and techniques, learn about real-world applications in a variety of industries, and connect with like-minded individuals from all over Africa.',
 		},
