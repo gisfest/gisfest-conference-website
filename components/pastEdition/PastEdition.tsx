@@ -15,7 +15,7 @@ export default function PastEditions() {
 				<SectionHeader
 					title={pastEditionsCTA}
 					layout="text-left"
-					paragraph="Watch the amazing session from GISfest2022"
+					paragraph="Watch the amazing sessions from #GISfest2022"
 				/>
 				{/*<div className="flex justify-end gap-4 mobile:none tablet:basis:1/2 laptop:basis-2/3 tablet:self-center p-2 tablet:p-4">
 					<button className="past-edition-nav">

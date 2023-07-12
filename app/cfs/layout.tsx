@@ -9,7 +9,7 @@ export default function RootLayout({
 }
 
 const pageTitle = 'Call for Speakers | GISfest 2023 Conference';
-const pageDescription = 'Submit your sessions in GISfest...';
+const pageDescription = 'We are accepting abstract submission for the following session types and their associated tracks...';
 
 //todo - dynamically generate og url
 export const metadata: Metadata = {

@@ -203,3 +203,11 @@ export type TConferenceSpeaker = {
 export type PEditionCard = {
 	link: string;
 };
+
+export enum PastEditionCategory {
+	All = 'All',
+	GeoInnovation = 'Geo-Innovation',
+	Workshop = 'Workshop',
+	PanelSession = 'Panel Session',
+	Keynote = 'Keynote Session',
+}

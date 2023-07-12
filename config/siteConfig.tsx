@@ -16,6 +16,7 @@ import MichaelOlanrewajuAvatar from '@/public/assets/images/team/michael-olanrew
 import bensonAvatar from '@/public/assets/images/team/bensonAvatar.jpeg';
 import {
 	AgendaCategory,
+	PastEditionCategory,
 	SponsorCategory,
 	TeamCategory,
 	TSiteConfiguration,
@@ -144,15 +145,15 @@ export const siteConfiguration: TSiteConfiguration = {
 		{
 			question: 'Who can attend',
 			answer:
-				'Geospatial enthusiasts, students, engineers, analysts, technicians, developers, managers, and anyone who uses geospatial data and/or technology',
+				'Geospatial enthusiasts, students, engineers, analysts, technicians, developers, managers, and anyone who uses geospatial data and/or technology.',
 		},
 		{
-			question: 'What to Expect',
+			question: 'What to expect',
 			answer:
 				'Discover the latest tools and techniques, learn about real-world applications in a variety of industries, and connect with like-minded individuals from all over Africa.',
 		},
 		{
-			question: 'Who can attend',
+			question: 'Why you should attend',
 			answer:
 				'Be part of the conversation on the future of geospatial technology and discover how it can revolutionize the way we work, live, and interact with the world around us.',
 		},
@@ -169,56 +170,28 @@ export const siteConfiguration: TSiteConfiguration = {
 			logo: LogoWhite,
 			companyName: 'Mapbox',
 			confirmed: false,
-			website: 'https://x.com',
+			website: '#',
 		},
 		{
 			category: SponsorCategory.Platinum,
 			logo: LogoWhite,
 			companyName: 'Spatialnode',
 			confirmed: false,
-			website: 'https://x.com',
+			website: '#',
 		},
 		{
 			category: SponsorCategory.Silver,
 			logo: LogoWhite,
 			companyName: 'Esri',
 			confirmed: false,
-			website: 'https://x.com',
+			website: '#',
 		},
 		{
 			category: SponsorCategory.Silver,
 			logo: LogoWhite,
 			companyName: 'Esri',
 			confirmed: false,
-			website: 'https://x.com',
-		},
-		{
-			category: SponsorCategory.Silver,
-			logo: LogoWhite,
-			companyName: 'Esri',
-			confirmed: false,
-			website: 'https://x.com',
-		},
-		{
-			category: SponsorCategory.Silver,
-			logo: LogoWhite,
-			companyName: 'Esri',
-			confirmed: false,
-			website: 'https://x.com',
-		},
-		{
-			category: SponsorCategory.Silver,
-			logo: LogoWhite,
-			companyName: 'Esri',
-			confirmed: false,
-			website: 'https://x.com',
-		},
-		{
-			category: SponsorCategory.Silver,
-			logo: LogoWhite,
-			companyName: 'Esri',
-			confirmed: false,
-			website: 'https://x.com',
+			website: '#',
 		},
 	],
 
@@ -555,68 +528,98 @@ export const siteConfiguration: TSiteConfiguration = {
 
 	pastEditionsCTA: pastEditionCTA,
 	pastEditionURL: pastEditionURL,
-	pastEditionCategoryFilters: [
-		'All',
-		'Keynote Session',
-		'Workshop',
-		'Career Panel',
-		'Geo-Innovation',
-	],
+
 	pastEditions: [
 		{
-			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
-			category: 'Keynote Session',
+			link: 'https://youtu.be/67Ivpg8IPGI',
+			category: PastEditionCategory.GeoInnovation,
 		},
 		{
-			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
-			category: 'Keynote Session',
+			link: 'https://youtu.be/ux7hmF5OJDE',
+			category: PastEditionCategory.GeoInnovation,
 		},
 		{
-			link: 'https://www.youtube.com/embed/dDn70QiifkE',
-			category: 'Geo-Innovation',
+			link: 'https://youtu.be/IJ8-XOSmaSM',
+			category: PastEditionCategory.GeoInnovation,
 		},
 		{
-			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
-			category: 'Geo-Innovation',
+			link: 'https://youtu.be/scc-IjtmD0E',
+			category: PastEditionCategory.GeoInnovation,
 		},
 		{
-			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
-			category: 'Geo-Innovation',
+			link: 'https://youtu.be/UFcDHg0hRuk',
+			category: PastEditionCategory.Workshop,
 		},
 		{
-			link: 'https://www.youtube.com/embed/dDn70QiifkE',
-			category: 'Workshop',
+			link: 'https://youtu.be/fxppNUzJLuc',
+			category: PastEditionCategory.Keynote,
 		},
 		{
-			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
-			category: 'Workshop',
+			link: 'https://youtu.be/VdmcjR599Aw',
+			category: PastEditionCategory.Keynote,
 		},
 		{
-			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
-			category: 'Workshop',
+			link: 'https://youtu.be/5AEozgE2LhI',
+			category: PastEditionCategory.Workshop,
 		},
 		{
-			link: 'https://www.youtube.com/embed/dDn70QiifkE',
-			category: 'Workshop',
+			link: 'https://youtu.be/mb3XKx4g1Iw',
+			category: PastEditionCategory.Workshop,
 		},
 		{
-			link: 'https://www.youtube.com/embed/t6v_xyLRHq8',
-			category: 'Workshop',
+			link: 'https://youtu.be/zjdzzEAkUA4',
+			category: PastEditionCategory.Workshop,
 		},
 		{
-			link: 'https://www.youtube.com/embed/PtTrjhCl0Pc',
-			category: 'Career Panel',
+			link: 'https://youtu.be/xuLYuSP33_I',
+			category: PastEditionCategory.GeoInnovation,
 		},
 		{
-			link: 'https://www.youtube.com/embed/dDn70QiifkE',
-			category: 'Career Panel',
+			link: 'https://youtu.be/_YISLCVMC0o',
+			category: PastEditionCategory.Workshop,
+		},
+		{
+			link: 'https://youtu.be/aFLRmof9d0A',
+			category: PastEditionCategory.GeoInnovation,
+		},
+		{
+			link: 'https://youtu.be/lBaPcU3XIdc',
+			category: PastEditionCategory.GeoInnovation,
+		},
+		{
+			link: 'https://youtu.be/d9LvpWVXVz8',
+			category: PastEditionCategory.PanelSession,
+		},
+		{
+			link: 'https://youtu.be/qgp3cTBJk60',
+			category: PastEditionCategory.GeoInnovation,
+		},
+		{
+			link: 'https://youtu.be/nAUDpzIj12s',
+			category: PastEditionCategory.GeoInnovation,
+		},
+		{
+			link: 'https://youtu.be/Yeta4Wsu1SY',
+			category: PastEditionCategory.PanelSession,
+		},
+		{
+			link: 'https://youtu.be/dDn70QiifkE',
+			category: PastEditionCategory.GeoInnovation,
+		},
+		{
+			link: 'https://youtu.be/PtTrjhCl0Pc',
+			category: PastEditionCategory.PanelSession,
+		},
+		{
+			link: 'https://youtu.be/t6v_xyLRHq8',
+			category: PastEditionCategory.PanelSession,
 		},
 	],
 
 	callForSpeakers: {
 		timeline: {
-			callOpen: '26th May 2023',
-			callClose: '25 August, 2023',
+			callOpen: '26th June, 2023',
+			callClose: '4th August, 2023',
 		},
 		sessionSubmissionButton: {
 			text: 'Submit a session',

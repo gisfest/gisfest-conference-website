@@ -3,10 +3,11 @@ import PastEditionCard from '@/components/pastEdition/PastEditionCard';
 import TopBgPattern from '@/components/shared/TopBgPattern';
 import DropDownSelect from '@/components/ui/DropDown';
 import { siteConfiguration } from '@/config/siteConfig';
+import { PastEditionCategory } from '@/config/types';
 import { useState } from 'react';
 
 export default function PastEditionPage() {
-	const { pastEditions, pastEditionCategoryFilters } = siteConfiguration;
+	const { pastEditions } = siteConfiguration;
 	const [category, setCategory] = useState<string>('All');
 
 	const handleSelectedCategory = (category: string) => {
@@ -16,6 +17,10 @@ export default function PastEditionPage() {
 	const filteredEditions = pastEditions.filter(
 		(items) => items.category === category
 	);
+
+	const filters = Object.values(PastEditionCategory).filter((item) => {
+		return isNaN(Number(item));
+	});
 	return (
 		<>
 			<TopBgPattern variant="center" pageTitle="Explore Past Edition" />
@@ -23,7 +28,7 @@ export default function PastEditionPage() {
 				<p className="text-tc-10">Filter:</p>
 				<div>
 					<DropDownSelect
-						options={pastEditionCategoryFilters}
+						options={filters}
 						selected={category}
 						className="px-4 py-2 appearance-none transition ease-in-out focus:outline-none cursor-pointer text-tc-10 border-tc-20 border rounded-lg bg-sc-10"
 						setSelected={setCategory}

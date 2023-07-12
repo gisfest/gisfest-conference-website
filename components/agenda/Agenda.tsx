@@ -2,10 +2,14 @@
 import AgendaCard from './AgendaCard';
 import { siteConfiguration } from '@/config/siteConfig';
 import SectionHeader from '../shared/SectionHeader';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
-
-const Agenda = () => {
+const Agenda = ({
+	showSectionTitle = false,
+}: {
+	showSectionTitle?: boolean;
+}) => {
 	const { agenda } = siteConfiguration;
 	const [activeDayId, setActiveDayId] = useState(1);
 	const [selectedTimezone, setSelectedTimezone] = useState('');
@@ -16,14 +20,25 @@ const Agenda = () => {
 	const currentDayObject = agenda.filter((agenda) => agenda.id === activeDayId);
 	const { date, day, agenda: agendaArray } = currentDayObject[0];
 
+	const lastFridayAgenda = day === 'Friday' ? agendaArray.slice(-1) : [];
+
+	const lastFridayAgendaRef = useRef(null);
+	const entry = useIntersectionObserver(lastFridayAgendaRef, {});
+	const isVisible = !!entry?.isIntersecting;
+	console.log(isVisible);
+
 	return (
 		<div className="flex flex-col gap-10 w-full">
-			<SectionHeader title="Agenda" layout='text-center' />
+			{showSectionTitle ? (
+				<SectionHeader title="Agenda" layout="text-center" />
+			) : null}
 			<div className="flex gap-6 tablet:gap-10  flex-col-reverse laptop:flex-row p-2 justify-between items-center laptop:top-24 tablet:top-[66px] top-[68px] rounded-b-xl  left-0 right-0 sticky  w-full backdrop-blur-2xl">
 				{/* Web  */}
 				<div className="flex w-full flex-row">
 					<div className=" flex-1 flex items-center space-x-2  tablet:space-x-2 font-p-semibold">
-						<h1 className="text-tc-0 text-h4 tablet:text-h2 laptop:w-[250px]">{day}</h1>
+						<h1 className="text-tc-0 text-h4 tablet:text-h2 laptop:w-[250px]">
+							{day}
+						</h1>
 						<span className="text-tc-10 text-body-sm tablet:text-body flex-grow">
 							{date}
 						</span>
@@ -39,7 +54,7 @@ const Agenda = () => {
 						<p className="text-tc-10 flex justify-end tablet:flex-1 w-full">
 							Showing time:
 						</p>
-						<div className='flex justify-end w-full flex-1'>
+						<div className="flex justify-end w-full flex-1">
 							<select className="p-2 text-tc-10 border-tc-20 border rounded-lg bg-transparent">
 								<option>(GMT+10:00)</option>
 								<option>(GMT+10:00)</option>
@@ -65,13 +80,18 @@ const Agenda = () => {
 						selectedTimezone={selectedTimezone}
 					/>
 				))}
+				{day === 'Friday' ? (
+					<AgendaCard
+						agenda={lastFridayAgenda[0]}
+						selectedTimezone={selectedTimezone}
+					/>
+				) : null}
 			</div>
 		</div>
 	);
 };
 
 export default Agenda;
-
 
 type TDaySwitcher = {
 	activeDayId: number;
